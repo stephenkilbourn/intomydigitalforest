@@ -1,7 +1,22 @@
 :root {
     --accent: #2D9CDB;
-    --grey: #444;
+    --grey: #444544;
+    --background: #EDEBE6;
+    ---brown-muddy: #cb6d51;
+    --brown: #cb6d51;
+    --velvet: #224634;
 }
+
+@font-face {
+    font-family: ostrich;
+    src: url('./ostrich-sans-bold.woff');
+}
+
+@font-face {
+    font-family: goudy;
+    src: url('./GoudyStM-webfont.woff');
+}
+
 
 html {
     font-size:  100%;
@@ -9,9 +24,22 @@ html {
 }
 
 body {
-    font-family: Inter, sans-serif;
+    font-family: goudy, sans-serif;
+    color: var(--velvet);
     line-height: 1.65;
-    
+    background-image: linear-gradient(
+  115deg,
+  hsl(43deg 16% 92%) 19%,
+  hsl(50deg 12% 83%) 64%,
+  hsl(59deg 9% 74%) 80%,
+  hsl(70deg 9% 66%) 89%,
+  hsl(81deg 8% 58%) 95%,
+  hsl(93deg 8% 50%) 99%,
+  hsl(107deg 9% 43%) 101%,
+  hsl(123deg 12% 36%) 102%,
+  hsl(138deg 20% 28%) 101%,
+  hsl(150deg 35% 20%) 100%
+);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -40,12 +68,19 @@ body {
 
 nav a {
     margin: 0 12px;
-    font-size: 1.25em;
+    font-family: ostrich;
+    font-weight: bold;
+    font-size: clamp(
+        1.5rem,
+        1.3vw + 1rem,
+        2.5rem
+      );
 }
 
 main {
+
     flex-grow: 1;
-    max-width: 60ch;
+    max-width: 120ch;
     width: 100%;
     margin: 0 auto;
 }
@@ -56,7 +91,7 @@ main {
 }
 
 a[href] {
-    color: var(--accent);
+    color: var(--brown);
 }
 
 a[href]:hover {
@@ -64,16 +99,23 @@ a[href]:hover {
 }
 
 a[href]:focus {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(---brown-muddy);
     outline-offset: 4px;
 }
 
 .footnotes {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 /* Typography */
-p {margin-bottom: 1.15rem;}
+p {
+    font-size: 1.25em;
+    margin-bottom: 1.15rem;
+}
+
+p, li {
+    font-size: 1.25em;
+}
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
@@ -81,7 +123,13 @@ h1, h2, h3, h4, h5 {
   line-height: 1.15;
 }
 
-h1 {font-size: 3.052em;}
+h1 {
+    font-size: clamp(
+        1.6rem,
+        2.5vw + 1rem,
+        4rem
+      );
+}
 
 h2 {font-size: 2.441em;}
 
@@ -91,7 +139,7 @@ h4 {font-size: 1.563em;}
 
 h5, .larger {font-size: 1.25em;}
 
-small {font-size: 0.8em;}
+small {font-size: 1em;}
 
 /* backlinks */
 .backlinks-title {
@@ -148,4 +196,14 @@ small {font-size: 0.8em;}
 
 .backlink:hover .backlink__preview {
     display: block;
+}
+
+svg {
+    max-height: 400px;
+}
+
+.tree_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

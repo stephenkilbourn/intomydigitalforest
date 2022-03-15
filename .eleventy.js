@@ -31,6 +31,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("notes", function (collection) {
         return collection.getFilteredByGlob(["notes/**/*.md", "index.md"]);
     });
+
+    eleventyConfig.addCollection("tagList", require("./utils/getTagList"));
     
     eleventyConfig.addPassthroughCopy('assets');
     eleventyConfig.setUseGitIgnore(false);
