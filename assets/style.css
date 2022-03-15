@@ -86,6 +86,8 @@ main {
 }
 
 .page-footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin-bottom: 8px;
 }
