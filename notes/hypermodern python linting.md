@@ -15,7 +15,16 @@ The setup had us add Flake8 and Black for formatting and linting. I haven't thor
 
 flake8-bugbear seems to expand on opinions beyond normal linting. Bandit then does some security analysis. Safety checks dependencies for known security vulnerabilities. Finally, we set up a pre-commit hook to run things on commit.  That wasn't much different than doing so in JS. 
 
-I did have a few issues in the tutorial.  It seems due to some updates with pip/poetry between when the tutorial was written and today. We set up a function to keep the session install by no for testing, linting, etc. pinned to versions. The function used in the tutoial failed without passing `poetry` the `--"--without-hashes"` flag.  I then had to update an exception handler from `raise click.ClickException(message)` to `raise click.ClickException(message) from error`.  I believe that was fallout to using newer versions of python than in the tutorial.
+I did have a few issues in the tutorial.  It seems due to some updates with pip/poetry between when the tutorial was written and today. We set up a function to keep the session install by no for testing, linting, etc. pinned to versions. The function used in the tutoial failed without passing `poetry` the `--"--without-hashes"` flag.  I then had to update an exception handler from
+```
+raise click.ClickException(message)
+```
+to
+```
+raise click.ClickException(message) from error
+```
+
+I believe that was fallout to using newer versions of python than in the tutorial.
 
 
 Nonetheless, I now have [a repo](https://github.com/stephenkilbourn/modern-python) that has a pretty nice setup. 
