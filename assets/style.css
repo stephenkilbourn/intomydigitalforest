@@ -160,7 +160,7 @@ small {font-size: 1em;}
 
 .backlink__preview {
     display: none;
-    
+    font-size: 0.8rem;
     position: absolute;
     bottom: 8px;
     left: 100%;
@@ -182,7 +182,7 @@ small {font-size: 1em;}
 }
 
 .backlink__preview h1 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 8px;
     font-weight: bold;
 }
@@ -221,7 +221,7 @@ td > code {
   background: #F9F7F6;
   word-wrap: break-word;
   box-decoration-break: clone;
-  padding: .1rem .2rem .3rem ;
+  padding: .1rem .2rem ;
   border-radius: .2rem;
 }
 
@@ -229,7 +229,7 @@ pre code {
     display: inline-block;
     background: #F9F7F6;
     white-space: pre;
-    overflow-x: scroll;
+    overflow-x: auto;
     block-size: 90%;
     padding: 0;
     padding-inline: .5rem;
