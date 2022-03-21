@@ -27,4 +27,4 @@ raise click.ClickException(message) from error
 I believe that was fallout to using newer versions of python than in the tutorial.
 
 
-Nonetheless, I now have [a repo](https://github.com/stephenkilbourn/modern-python) that has a pretty nice setup. 
+Nonetheless, I now have [a repo](https://github.com/stephenkilbourn/modern-python) that has a pretty nice setup and I can move on to [[hypermodern python typing]].
