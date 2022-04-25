@@ -3,7 +3,6 @@ tags:
   - python
   - development
   - codeschool
-  - typechecking
 ---
 
 
