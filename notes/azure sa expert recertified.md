@@ -5,7 +5,7 @@ tags:
 ---
 
 
-# AWS Solutions Architect Associate Again
+# Azure Solutions Architect Expert Still
 
 I last posted in [[aws sa recertified]], that I planned to get my AWS Developers Associate. Well, I started that training, but a newborn and a looming deadline for my Azure Solutions Architect Expert both hit this simmer. I decided to postpone AWS until spring and take the Azure one before it expired.
 
