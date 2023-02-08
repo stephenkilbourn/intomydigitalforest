@@ -61,10 +61,14 @@ body {
     margin-top: 8px;
 }
 
+.page-header nav a {
+    transition: color .2s ease-in
+}
 .page-header nav a:not(:hover):not(:focus) {
     color: currentColor;
     text-decoration: none;
 }
+
 
 nav a {
     margin: 0 12px;
@@ -75,6 +79,17 @@ nav a {
         1.3vw + 1rem,
         2.5rem
       );
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+
+nav ul li a {
+    text-decoration: none;
 }
 
 main {
